@@ -6,19 +6,19 @@ Let the mask be a random variable $M$ and the input image is also a random varia
 ## Methodology
 Given a set of training data including endoscopic images $(x^{<1>}, x^{<2>}, ..., x^{<N>})$ and target masks $(m^{<1>}, m^{<2>}, ..., m^{<N>})$ (any $x^{<i>}$ or $m^{<i>}$ is vector-valued), our goal is maximizing the conditional log-likelihood of this training dataset:<br>
 <center>
-    <div style="display: inline-block; text-align: left;">
+    <!-- <div style="display: inline-block; text-align: left;"> -->
         $\theta^* = \text{argmax}_\theta\ \sum_{i=1}^N \log P(m^{<i>}|x^{<i>})$<br>
         $\ \ \ \  = \text{argmax}_\theta\ \sum_{i=1}^N \log \text{Ber}(m^{<i>}|G_\theta(x^{<i>}))$<br>
-    </div>
+    <!-- </div> -->
 </center>
 
 We have assumed that the elements in an arbitrary $m^{<i>}$ are independent. Therefore:<br>
 <center>
-    <div style="display: inline-block; text-align: left;">
+    <!-- <div style="display: inline-block; text-align: left;"> -->
         $\theta^* = \text{argmax}_\theta\ \sum_{i=1}^N \sum_{k=1}^K \log \text{Ber}(m^{<i>}_k|G_\theta(x^{<i>})_k)$ <br>
         $\ \ \ \ = \text{argmax}_\theta\ \sum_{i=1}^N \sum_{k=1}^K \log G_\theta(x^{<i>})_k^{m^{<i>}_k} (1 - G_\theta(x^{<i>})_k)^{1 - m^{<i>}_k}$<br>
         $\ \ \ \ = \text{argmax}_\theta\ \sum_{i=1}^N \sum_{k=1}^K {m^{<i>}_k}\log G_\theta(x^{<i>})_k - ({1 - m^{<i>}_k})\log(1 - G_\theta(x^{<i>})_k)$<br>
-    </div>
+    <!-- </div> -->
 </center>
 
 It turns out that we have to optimize a binary cross-entropy loss function.<br>
