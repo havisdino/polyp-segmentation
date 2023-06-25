@@ -4,7 +4,7 @@
 Given an endoscopic image, we have to predict a binary mask where 1's pixels are the polyps' regions.
 
 ## Assumptions
-Let the mask be a random variable $M$ and the input image is also a random variable $X$. To perform the segmentation task, we estimate the conditional probablity $P(M=m|X=x)$. Due to the assumption that the mask is binary, $P(M=m|X=x)$ is a Bernoulli distribution, which means that $m|x \sim \text{Ber}(\lambda(x))$ where $\lambda(x)$ is modeled using a neural network $G_\theta(x)$ ($\theta$ is a set of the network's parameters). In conclusion, we have to estimate $\text{Ber}(m;G_\theta(x))$. Another assumption is that the elements in an arbitrary $m^{< i>}$ are independent for the sake of calculating later join probabilities.
+Let the mask be a random variable $M$ and the input image is also a random variable $X$. To perform the segmentation task, we estimate the conditional probablity $P(M=m|X=x)$. Due to the assumption that the mask is binary, $P(M=m|X=x)$ is a Bernoulli distribution, which means that $m|x \sim \text{Ber}(\lambda(x))$ where $\lambda(x)$ is modeled using a neural network $G_\theta(x)$ ($\theta$ is a set of the network's parameters). In conclusion, we have to estimate $\text{Ber}(m;G_\theta(x))$. Another assumption is that the elements in an arbitrary $m^{< i>}$ are independent for the sake of calculating the later join probabilities.
 
 ## Methodology
 Given a set of training data including endoscopic images $(x^{< 1>}, x^{< 2>}, ..., x^{< N>})$ and target masks $(m^{< 1>}, m^{< 2>}, ..., m^{< N>})$ (any $x^{< i>}$ or $m^{< i>}$ is vector-valued), our goal is maximizing the conditional log-likelihood of this training dataset:  
