@@ -12,14 +12,14 @@ Given a set of training data including endoscopic images $(x^{< 1>}, x^{< 2>}, .
 ```math
 \begin{align*}
 \theta^* &= \text{argmax}_\theta {\sum_{i=1}^N \log P(m^{< i>}|x^{< i>})} \\
-         &= \text{argmax}_\theta \sum_{i=1}^N \log \text{Ber}(m^{< i>}|G_\theta(x^{< i>}))
+         &= \text{argmax}_\theta \sum_{i=1}^N \log \text{Ber}(m^{< i>};G_\theta(x^{< i>}))
 \end{align*}
 ```
 We have assumed that the elements in an arbitrary $m^{< i>}$ are independent. Therefore:
 
 ```math
 \begin{align*}
-\theta^* &= \text{argmax}_\theta\ \sum_{i=1}^N \sum_{k=1}^K \log \text{Ber}(m^{< i>}_k|G_\theta(x^{< i>})_k) \\
+\theta^* &= \text{argmax}_\theta\ \sum_{i=1}^N \sum_{k=1}^K \log \text{Ber}(m^{< i>}_k;G_\theta(x^{< i>})_k) \\
 
          &= \text{argmax}_\theta\ \sum_{i=1}^N \sum_{k=1}^K \log G_\theta(x^{< i>})_k^{m^{< i>}_k} (1 - G_\theta(x^{< i>})_k)^{1 - m^{< i>}_k} \\
 
