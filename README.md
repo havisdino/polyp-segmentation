@@ -29,3 +29,19 @@ We have assumed that the elements in an arbitrary $m^{< i>}$ are independent. Th
 
 It turns out that we have to optimize a binary cross-entropy loss function.  
 In this project, the neural network $G_\theta(x)$ is modeled as a U-Net.
+
+## Run locally
+* Clone this repository
+```
+git clone https://github.com/havisdino/polyp-segmentation.git
+cd polyp-segmentation
+```
+* Install dependencies
+```
+pip install -r requirements.txt
+```
+* Download the trained model weight [here](https://github.com/havisdino/polyp-segmentation/releases/download/v1.0.0/unet128.pt) and move it into [bin](bin).
+* Run the app
+```
+streamlit run app.py
+```
