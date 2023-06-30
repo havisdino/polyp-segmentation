@@ -23,7 +23,7 @@ We have assumed that the elements in an arbitrary $m^{< i>}$ are independent. Th
 
          &= \text{argmax}_\theta\ \sum_{i=1}^N \sum_{k=1}^K \log G_\theta(x^{< i>})_k^{m^{< i>}_k} (1 - G_\theta(x^{< i>})_k)^{1 - m^{< i>}_k} \\
 
-         &= \text{argmax}_\theta\ \sum_{i=1}^N \sum_{k=1}^K {m^{< i>}_k}\log G_\theta(x^{< i>})_k - ({1 - m^{< i>}_k})\log(1 - G_\theta(x^{< i>})_k)
+         &= \text{argmax}_\theta\ \sum_{i=1}^N \sum_{k=1}^K {m^{< i>}_k}\log G_\theta(x^{< i>})_k + ({1 - m^{< i>}_k})\log(1 - G_\theta(x^{< i>})_k)
 \end{align*}
 ```
 
