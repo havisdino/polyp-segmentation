@@ -45,3 +45,4 @@ if img is not None and clicked:
     mask_org = transforms.functional.resize(mask_org, img_org.shape[2:], antialias=True)
     
     c2.image(merge(img_org, mask_org))
+    
