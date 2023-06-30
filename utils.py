@@ -16,6 +16,6 @@ def merge(image, mask):
     bin_mask = np.round(prob_mask)
     heatmap = plt.cm.jet(prob_mask)[..., :3]
     segmentation = (image + heatmap) * 0.5
-    return [image, segmentation, prob_mask, bin_mask]
+    return image, segmentation, prob_mask, bin_mask
     
     

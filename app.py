@@ -44,5 +44,16 @@ if img is not None and clicked:
     mask_org = mask.unsqueeze(0)
     mask_org = transforms.functional.resize(mask_org, img_org.shape[2:], antialias=True)
     
-    c2.image(merge(img_org, mask_org))
+    c21, c22 = c2.columns(2)
     
+    img, seg, prob, bm = merge(img_org, mask_org)
+    
+    c21.text('Input image')
+    c21.image(img)
+    c21.text('Probabilistic mask')
+    c21.image(prob)
+    
+    c22.text('Heat map')
+    c22.image(seg)
+    c22.text('Binary mask')
+    c22.image(bm)
