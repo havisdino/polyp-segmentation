@@ -24,8 +24,7 @@ def load_unet():
 IMG_SIZE = (128, 128)
 net = load_unet()
 
-
-st.title('Polyp segmentation')
+st.title('Polyp Segmentation')
 c1, c2 = st.columns([0.3, 0.7])
 
 img = c1.file_uploader('Upload your endoscopic image', type=['png', 'jpg', 'jpeg'])
