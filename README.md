@@ -30,10 +30,10 @@ We have assumed that the elements in an arbitrary $m^{< i>}$ are independent. Th
 It turns out that we have to optimize a binary cross-entropy loss function.  
 In this project, the neural network $G_\theta(x)$ is modeled as a U-Net.
 
-## Run locally
+## Application
 ### Demo
 [demo_vid.webm](https://github.com/havisdino/polyp-segmentation/assets/89296126/8c8781ea-47fd-4ff3-af9a-73c926728a7c)
-### How to run
+### How to run locally
 * Clone this repository
 ```
 git clone https://github.com/havisdino/polyp-segmentation.git
