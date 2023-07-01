@@ -30,6 +30,18 @@ We have assumed that the elements in an arbitrary $m^{< i>}$ are independent. Th
 It turns out that we have to optimize a binary cross-entropy loss function.  
 In this project, the neural network $G_\theta(x)$ is modeled as a U-Net.
 
+## Testing results
+The network achieved an accuracy of 92% on the KvasirSEG test dataset.
+Here are some concrete testing samples:
+* Input endoscopic images
+![image](https://github.com/havisdino/polyp-segmentation/assets/89296126/c391ec6c-8c65-4e35-93aa-0bbe7ff063ce)
+* Heat maps
+![image](https://github.com/havisdino/polyp-segmentation/assets/89296126/acd62ba6-88b0-4326-b0ac-244db05b1157)
+* Predicted probabilistic masks
+![image](https://github.com/havisdino/polyp-segmentation/assets/89296126/b57e3cd4-d74b-4d9a-97c7-c3599b9e630f)
+* Groud truth
+![image](https://github.com/havisdino/polyp-segmentation/assets/89296126/468af59b-48bd-4a25-bb27-1d6d5fcc6315)
+
 ## Application
 ### Demo
 [demo_vid.webm](https://github.com/havisdino/polyp-segmentation/assets/89296126/8c8781ea-47fd-4ff3-af9a-73c926728a7c)
