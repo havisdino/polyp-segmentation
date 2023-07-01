@@ -44,7 +44,7 @@ Here are some concrete testing samples:
 
 ## Application
 ### Demo
-![demo_vid.webm](https://github.com/havisdino/polyp-segmentation/assets/89296126/8c8781ea-47fd-4ff3-af9a-73c926728a7c)
+[demo.webm](https://github.com/havisdino/polyp-segmentation/assets/89296126/8c8781ea-47fd-4ff3-af9a-73c926728a7c)
 ### How to run locally
 * Clone this repository
 ```
