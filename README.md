@@ -40,11 +40,11 @@ Here are some concrete testing samples:
 * Predicted probabilistic masks
 ![image](https://github.com/havisdino/polyp-segmentation/assets/89296126/b57e3cd4-d74b-4d9a-97c7-c3599b9e630f)
 * Groud truth
-![image](https://github.com/havisdino/polyp-segmentation/assets/89296126/468af59b-48bd-4a25-bb27-1d6d5fcc6315)
+![image](https://github.com/havisdino/polyp-segmentation/assets/89296126/94ecc4cc-89d7-4f95-8e09-d4dcd9c02749)
 
 ## Application
 ### Demo
-[demo_vid.webm](https://github.com/havisdino/polyp-segmentation/assets/89296126/8c8781ea-47fd-4ff3-af9a-73c926728a7c)
+![demo_vid.webm](https://github.com/havisdino/polyp-segmentation/assets/89296126/8c8781ea-47fd-4ff3-af9a-73c926728a7c)
 ### How to run locally
 * Clone this repository
 ```
