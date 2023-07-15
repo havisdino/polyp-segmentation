@@ -50,9 +50,9 @@ The learning curves:
 
 ## Application
 ### Demo
+Give it a try [here](https://polyp-segmentation.streamlit.app/)
 
-![demo](assets/demo.mov)
-
+![demo](https://github.com/havisdino/polyp-segmentation/assets/89296126/c4922813-b744-44ae-81d0-8b51f0f8dad5)
 
 ### How to run locally
 * Clone this repository
