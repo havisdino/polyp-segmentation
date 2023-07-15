@@ -50,7 +50,10 @@ The learning curves:
 
 ## Application
 ### Demo
-[demo.mov](assets/demo.mov)
+
+![demo](assets/demo.mov)
+
+
 ### How to run locally
 * Clone this repository
 ```
