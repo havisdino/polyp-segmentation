@@ -2,6 +2,23 @@ import torch
 from torch import nn
 
 
+class SpatialAttention(nn.Module):
+    def __init__(self, kernel_size=7):
+        super().__init__()
+        self.sa = nn.Sequential(
+            nn.Conv2d(2, 1, kernel_size, padding='same'),
+            nn.BatchNorm2d(1)
+        )
+
+    def forward(self, x):
+        x_compress = torch.cat([
+            x.max(dim=1, keepdim=True)[0],
+            x.mean(dim=1, keepdim=True)
+        ], dim=1)
+        x_out = self.sa(x_compress)
+        scale = torch.sigmoid(x_out)
+        return x * scale
+
 class ConvBlock(nn.Module):
     def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0):
         super().__init__()
@@ -101,12 +118,15 @@ class UNet(nn.Module):
             nn.Conv2d(64, 1, 3, padding='same'),
             nn.Sigmoid(),
         ])
+        
+        self.sa = SpatialAttention()
     
     def forward(self, x):
         skips = []
         for block in self.downsample:
             x = block(x)
             skips.append(x)
+        x = self.sa(x)
         skips = reversed(skips[:-1])
         for block, skip in zip(self.upsample, skips):
             x = block(x)
