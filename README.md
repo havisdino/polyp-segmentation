@@ -50,7 +50,7 @@ The learning curves:
 
 ## Application
 ### Demo
-[demo.webm](https://github.com/havisdino/polyp-segmentation/assets/89296126/8c8781ea-47fd-4ff3-af9a-73c926728a7c)
+[demo.mov](assets/demo.mov)
 ### How to run locally
 * Clone this repository
 ```
