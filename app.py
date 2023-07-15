@@ -18,7 +18,7 @@ def load_unet():
     url = 'https://github.com/havisdino/polyp-segmentation/releases/download/v1.0.0/saunet128.pt'
     if 'saunet128.pt' not in os.listdir('bin'):
         print('Downloading model...')
-        request.urlretrieve(url, 'saunet128.pt')
+        request.urlretrieve(url, 'bin/saunet128.pt')
         
     net = UNet()
     state_dict = torch.load('bin/saunet128.pt', 'cpu')
