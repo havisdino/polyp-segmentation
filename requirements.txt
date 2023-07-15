@@ -1,5 +1,5 @@
-torch
-torchvision
-matplotlib
-numpy
+torch==2.0.0
+torchvision==0.15.1
+matplotlib==3.5.1
+numpy==1.23.4
 watchdog

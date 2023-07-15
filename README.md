@@ -31,16 +31,16 @@ It turns out that we have to optimize a binary cross-entropy loss function.
 In this project, the neural network $G_\theta(x)$ is modeled as a U-Net.
 
 ## Testing results
-The network achieved an accuracy of 92% on the KvasirSEG test dataset.
+The network achieved an accuracy of 92.32% and a f1 score of 72.54% on the KvasirSEG test dataset.
 Here are some concrete testing samples:
 * Input endoscopic images
-![image](https://github.com/havisdino/polyp-segmentation/assets/89296126/c391ec6c-8c65-4e35-93aa-0bbe7ff063ce)
+![image](assets/input.png)
 * Heat maps
-![image](https://github.com/havisdino/polyp-segmentation/assets/89296126/acd62ba6-88b0-4326-b0ac-244db05b1157)
-* Predicted probabilistic masks
-![image](https://github.com/havisdino/polyp-segmentation/assets/89296126/b57e3cd4-d74b-4d9a-97c7-c3599b9e630f)
+![image](assets/heatmaps.png)
+* Predicted probability masks
+![image](assets/probmasks.png)
 * Ground truth
-![image](https://github.com/havisdino/polyp-segmentation/assets/89296126/94ecc4cc-89d7-4f95-8e09-d4dcd9c02749)
+![image](assets/ground_truth.png)
 
 ## Application
 ### Demo
@@ -55,7 +55,6 @@ cd polyp-segmentation
 ```
 pip install -r requirements.txt
 ```
-* Download the trained model weight [here](https://github.com/havisdino/polyp-segmentation/releases/download/v1.0.0/unet128.pt) and move it into [bin](bin).
 * Run the app
 ```
 streamlit run app.py
