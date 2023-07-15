@@ -17,9 +17,10 @@ st.set_page_config(
 def load_unet():
     url = 'https://github.com/havisdino/polyp-segmentation/releases/download/v1.0.0/unet128.pt'
     if 'unet128.pt' not in os.listdir('bin'):
+        print('Downloading model...')
         request.urlretrieve(url, 'unet128.pt')
         
-    net =  UNet()
+    net = UNet()
     state_dict = torch.load('bin/unet128.pt', 'cpu')
     net.load_state_dict(state_dict)
     net.eval()

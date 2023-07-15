@@ -28,10 +28,10 @@ We have assumed that the elements in an arbitrary $m^{< i>}$ are independent. Th
 ```
 
 It turns out that we have to optimize a binary cross-entropy loss function.  
-In this project, the neural network $G_\theta(x)$ is modeled as a U-Net.
+In this project, the neural network $G_\theta(x)$ is modeled as a simple U-Net.
 
 ## Testing results
-The network achieved an accuracy of 92.32% and a f1 score of 72.54% on the KvasirSEG test dataset.
+The network achieved an accuracy of 92.42% and a f1 score of 74.68% on the KvasirSEG test dataset.
 Here are some concrete testing samples:
 * Input endoscopic images
 ![image](assets/input.png)
@@ -41,6 +41,12 @@ Here are some concrete testing samples:
 ![image](assets/probmasks.png)
 * Ground truth
 ![image](assets/ground_truth.png)
+
+The learning curves:
+<p align="center">
+  <img src="assets/acc.png" width="400" height="300" />
+  <img src="assets/f1.png" width="400" height="300" /> 
+</p>
 
 ## Application
 ### Demo
